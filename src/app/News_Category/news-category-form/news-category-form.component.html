@@ -1,0 +1,23 @@
+<form novalidate autocomplete="off" #form="ngForm" (submit)="onSubmit(form)">
+    <div class="form-group">
+        <label>CATEGORY ID</label>
+        <input class="form-control form-control-lg" placeholder="Category Id" name="catId"
+            #catId="ngModel" [(ngModel)]="service.formData.catId"
+            required [class.invalid]="catId.invalid &#038;&#038; catId.touched">
+    </div>
+    <div class="form-group">
+        <label>CATEGORY</label>
+        <input class="form-control form-control-lg" placeholder="Category" name="Category"
+            #Category="ngModel" [(ngModel)]="service.formData.Category"
+             [class.invalid]="Category.invalid &#038;&#038; Category.touched">
+    </div>
+    <div class="form-group">
+        <label>TYPE</label>
+        <input class="form-control form-control-lg" placeholder="Type" name="Type"
+            #Category="ngModel" [(ngModel)]="service.formData.Type"
+             >
+    </div>
+    <div class="form-group">
+        <button class="btn btn-info btn-lg btn-block" type="submit" [disabled]="form.invalid">SUBMIT</button>
+    </div>
+</form>
